@@ -1,4 +1,5 @@
 import 'package:bmi_calculator/home.dart';
+import 'package:bmi_calculator/splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,10 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'bmi calculator',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Home(),
+      home: SplashScreen(),
     );
   }
 }

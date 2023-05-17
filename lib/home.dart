@@ -62,10 +62,10 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.all(20),
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               // color: const Color(0xff7c94b6),
               image: DecorationImage(
-                image: AssetImage('images/healthy.jpg'),
+                image: AssetImage('images/bg3.jpg'),
                 fit: BoxFit.cover,
                 opacity: 120,
               ),
@@ -122,20 +122,24 @@ class _HomeState extends State<Home> {
                   onTap: () {
                     checkbmi();
                     showModalBottomSheet(
+                      isDismissible: true,
                         elevation: 3,
                         backgroundColor: Colors.white,
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30)),
+                            borderRadius: BorderRadius.only(topRight: Radius.circular(20), topLeft: Radius.circular(20)),
+                        ),
                         context: context,
                         builder: (context) {
                           return Container(
                             width: MediaQuery.of(context).size.width,
                             height: 300,
-                            margin: EdgeInsets.only(top: 30),
-                            padding: EdgeInsets.all(20),
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage('images/healthy.jpg'))),
+                            // padding: EdgeInsets.only(top: 30),
+                             padding: EdgeInsets.all(20),
+                            // decoration: BoxDecoration(
+                            //   borderRadius: BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                            //     image: DecorationImage(
+                            //       fit: BoxFit.cover,
+                            //         image: AssetImage('images/bg2.jpg'))),
                             child: Column(
                               children: [
                                 messageColor
